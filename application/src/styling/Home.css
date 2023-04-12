@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+
+@font-face {
+    font-family: valorant;
+    src: url('./Valorant\ Font.ttf');
+}
+
+@font-face {
+    font-family: ProductSans;
+    src: url('./Product\ Sans\ Bold.ttf');
+}
+
+.homepage{
+    position: relative;
+    width: 100%;
+}
+
+.title{
+    position: relative;
+    padding-top: 15vh;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.title-1{
+    position: relative;
+    left: -1920px;
+    margin-left: 50px;
+    width: fit-content;
+    font-family: 'valorant';
+    font-size: 10vh;
+    line-height: 0.75em;
+    background-color: red;
+    color: white;
+    padding-top: 1%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title-2{
+    position: relative;
+    left: -1920px;
+    margin-left: 50px;
+    width: fit-content;
+    font-size: 10vh;
+    line-height: 0.7em;
+    font-family: 'valorant';
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    padding-top: 1%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#typed-text{
+    position: relative;
+    width: fit-content;
+    color: white;
+    font-size: 5vh;
+    font-family: "Saira Condensed";
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5vh;
+}
+
+.apply-container{
+    position: relative;
+    min-height: 35vh;
+}
+
+.apply-border{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: 5px solid black;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20%;
+    margin-top: 50px;
+    transition: top 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.apply-button{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    font-family: "ProductSans";
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    transition: margin 0.3s ease-in-out;
+}
+
+.apply-button:hover{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.apply-border:hover{
+    top: -5px;
+    left: -5px;
+}
+
+.venue{
+    position: relative;
+    width: 70vw;
+    height: fit-content;
+    margin-left: 10vw;
+    border: 5px solid black;
+    background-color: rgb(255, 42, 42);
+    cursor: default;
+}
+
+.venue-title{
+    position: relative;
+    top: -35px;
+    left: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 35px;
+    font-weight: 700;
+    background-color: black;
+    color: rgb(255, 42, 42);
+}
+
+.venue-details{
+    position: relative;
+    padding-left: 10%;
+    padding-bottom: 50px;
+    padding-right: 10%;
+}
+
+.venue-details-hidden{
+    position: relative;
+    opacity: 0;
+    line-height: 2em;
+    font-size: 3vh;
+}
+
+.details{
+    position: relative;
+    width: 70vw;
+    height: fit-content;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    border: 5px solid black;
+    background-color: rgb(255, 42, 42);
+    cursor: default;
+}
+
+.details-title{
+    position: relative;
+    top: -35px;
+    left: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 35px;
+    font-weight: 700;
+    background-color: black;
+    color: rgb(255, 42, 42);
+}
+
+.details-details{
+    position: relative;
+    padding-left: 10%;
+    padding-bottom: 50px;
+    padding-right: 10%;
+}
+
+.details-details-hidden{
+    position: relative;
+    opacity: 0;
+    line-height: 2em;
+    font-size: 3vh;
+}
+
+.sponsers-container{
+    position: relative;
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 20vh;
+    height: fit-content;
+    background-color: black;
+    text-align: center;
+}
+
+.sponsers-title{
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-size: 3vh;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
