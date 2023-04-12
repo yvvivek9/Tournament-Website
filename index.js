@@ -1,12 +1,19 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const path = require("path")
+const https = require("https")
+const fs = require("fs")
 const { MongoClient } = require("mongodb");
 const dburl = "mongodb+srv://vivekdgrt:Pintu090703@cluster0.qxivjzg.mongodb.net/?retryWrites=true&w=majority";
 
 const app = express()
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.resolve('application', 'build')));
+
+const certificates = {
+    key: fs.readFileSync('./certificates/certificate.key'),
+    cert: fs.readFileSync('./certificates/certificate.pem')
+}
 
 app.get("/", (req,res) => {
     console.log(__dirname)
@@ -42,9 +49,6 @@ app.post("/dummy", (req, res) => {
     res.status(200)
 })
 
-app.listen(4000, (err) => {
-    if(err)
-        console.log("Error: ", err)
-    else
-        console.log("Server started running on port 4000")
+https.createServer(certificates, app).listen(443, () => {
+    console.log("Server running on port 443")
 })
