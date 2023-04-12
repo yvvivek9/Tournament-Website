@@ -101,6 +101,12 @@ function App() {
           <Route exact path='/apply' element={<TournamentForm user={user} setLoading={setLoading} />} ></Route>
         </Routes>
       </BrowserRouter>
+      <div className='policies'>
+        <span>&#169; Kohinoor eSports</span> &nbsp;&nbsp;&nbsp;
+        <a href='/privacy-policy'>Privacy Policy</a> &nbsp;&nbsp;&nbsp;
+        <a href='/terms-and-conditions'>Terms and Conditions</a> &nbsp;&nbsp;&nbsp;
+        <a href='/return-policy'>Return Policy</a> 
+      </div>
     </>
   );
 }

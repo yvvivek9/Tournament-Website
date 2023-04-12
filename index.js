@@ -20,6 +20,18 @@ app.get("/", (req,res) => {
     res.sendFile(path.resolve('application', 'build', 'index.html'))
 })
 
+app.get("/privacy-policy", (req, res) => {
+    res.sendFile(path.resolve("policies", "privacy-policy.html"))
+})
+
+app.get("/terms-and-conditions", (req, res) => {
+    res.sendFile(path.resolve("policies", "terms-and-conditions.html"))
+})
+
+app.get("/return-policy", (req, res) => {
+    res.sendFile(path.resolve("policies", "return-policy.html"))
+})
+
 app.post("/findOrAdd", (req, res) => {
     const client = new MongoClient(dburl);
     var Person = {}
