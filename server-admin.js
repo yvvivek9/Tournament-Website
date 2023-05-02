@@ -62,7 +62,7 @@ app.post("/confirmPayment", async (req, res) => {
 })
 
 app.get("*", (req, res) => {
-    res.status(404).sendFile("404.html")
+    res.redirect("/")
 })
 
 https.createServer(certificates, app).listen(443, () => {
