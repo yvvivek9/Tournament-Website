@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import axios from 'axios'
 import jwtDecode from 'jwt-decode';
 import raze from './images/raze.mp4'
+import dp from './images/dp.png'
 import instagram from './images/instagram.svg'
 import whatsapp from './images/whatsapp.svg'
 import discord from './images/discord.svg'
@@ -88,6 +89,7 @@ function App() {
 			<div className='header-background'></div>
 			<div className='header'>
 				<div className='logo'>
+					<img src={dp} className='logo-img' alt="Not supported" />
 					<div className='logo-name'>
 						KOHIN&#9830;&#9830;R &nbsp;eSPORTS
 					</div>

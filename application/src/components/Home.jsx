@@ -96,7 +96,7 @@ function Venue() {
             {venue ? 
                 <span className="venue-details-hidden">
                     <span><b>Date:</b> &nbsp;To Be Announced... </span><br />
-                    <span><b>Location:</b> &nbsp; Swarna Paradise, Hubballi</span><br />
+                    <span><b>Location:</b> &nbsp; Swarna Paradise, Hubballi</span><br /><br />
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15389.85275250851!2d75.1463053!3d15.3513811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d75c53c77bc7%3A0x3c33ea4e64b161d8!2sHotel%20Swarnaa%20Paradise!5e0!3m2!1sen!2sin!4v1681147218590!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
                 <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
@@ -130,9 +130,53 @@ function Details() {
             {details ? 
                 <span className="details-details-hidden">
                     <ul>
-                        <li>We will not be providing PC Setups, players are requested to get their own laptops</li>
-                        <li>Rule 2</li>
-                        <li>Rule 3</li>
+                        <li>Registration Fee is <b>Rs. 3500</b> per team (non-refundable)</li>
+                        <li>PC Setups will be provided by us and the game must be played <b>On-site only</b></li>
+                        <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
+                        <li>Veto based map selection is done among the current 7 maps pool to select 1 map</li>
+                        <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
+                        <li>Further details for play-offs will be provided by mail and discord</li>
+                    </ul>
+                </span>:
+                <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
+            }
+            </div>
+        </div>
+    )
+}
+
+function Rules() {
+    const [rules, showRules] = useState(false)
+
+    const handleClick = async () => {
+        showRules(true)
+        return Promise.resolve()
+    }
+
+    const animate = () => {
+        anime({
+            targets: '.rules-rules-hidden',
+            opacity: 1,
+            easing: 'linear',
+            duration: 1000
+        })
+    }
+
+    return(
+        <div className="rules" onClick={() => {handleClick().then(() => {animate()})}} data-aos="flip-up" data-aos-duration="1000" data-aos-once >
+            <div className="rules-title">Rules</div>
+            <div className="rules-rules">
+            {rules ? 
+                <span className="rules-rules-hidden">
+                    <ul>
+                        <li>Cheating of any kind is strictly prohibited</li>
+                        <li>Physical and Verbal Abuse will not be entertained</li>
+                        <li>Consumable Restrictions:<br />
+                            &emsp;Allowed: Water bottles, soft drinks, chewing gum<br />
+                            &emsp;Not Allowed: Hot drinks, eatables, Tobacco, spitting.
+                        </li>
+                        <li>All the team members should be present at the venue sharp at the mentioned reporting time</li>
+                        <li>If a player has represented a team, he/she won’t be able to play for any other team(s).</li>
                     </ul>
                 </span>:
                 <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
@@ -162,6 +206,7 @@ export default function Home ({user, setLoading, loading}){
             <ApplyButton user={user} setLoading={setLoading} />
             <Venue />
             <Details />
+            <Rules />
             <Sponsers />
         </div>
     )
