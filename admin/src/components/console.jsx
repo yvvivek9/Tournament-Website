@@ -90,6 +90,7 @@ export default function Console(){
                                 <td>{value.player6_discord}</td>
                             </tr>
                         </table>
+                        <p>Name: {value.name}, Email: {value.email}</p>
                         <p>Payment ID: {value.payment_id}</p>
                         <p>Payment Status: {value.payment_status}</p>
                         <input type="button" value="Confirm Payment" onClick={() => {updatePayment(value._id, "confirmed")}}/>
