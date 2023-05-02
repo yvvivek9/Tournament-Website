@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import '../styling/TournamentForm.css'
-import paymentQr from '../images/payment-qr.jpg'
+import paymentQr from '../images/payment-qr.png'
 import cancel from "../images/cancel.svg"
 
 function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
