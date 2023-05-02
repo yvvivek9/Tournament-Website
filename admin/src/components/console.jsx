@@ -17,9 +17,10 @@ export default function Console(){
     const updatePayment = async (id, value) => {
         if(window.confirm(`Are you sure want to ${value} the payment?`)){
             try {
-                await axios.post("/confirmPayment", {_id: id, status: value})
+                var response1 = await axios.post("/confirmPayment", {_id: id, status: value})
                 var response2 = await axios.post("/viewTeams")
                 setData(response2.data.data)
+                alert(response1.data.success)
             } catch (error) {
                 console.log(error)
             }

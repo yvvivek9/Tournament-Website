@@ -17,6 +17,11 @@ const certificates = {
     cert: fs.readFileSync('./certificates/certificate.pem')
 }
 
+app.use(express.static(path.resolve('admin', 'build')));
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve('admin', 'build', 'index.html'))
+})
+
 app.post("/adminLogin", (req, res) => {
     if(req.body.username === "ninJajji" && req.body.password === "@122Thullu")
         res.json({valid: true})
@@ -46,30 +51,24 @@ app.post("/confirmPayment", async (req, res) => {
         const db = client.db("Tournament")
         const Applicants = db.collection("Applicants")
         Player = await Applicants.updateOne({_id: new ObjectId(req.body._id)}, {$set: {payment_status: req.body.status}})
-        console.log(Player)
-        res.status(200)
+        res.status(200).json({success: `Player payment ${req.body.staus}`})
     } catch (error) {
         console.log("Error in /confirmPayment: ", error)
-        res.status(500)
+        res.status(500).json({success: "Player payment update failed"})
     }
     finally{
         await client.close()
     }
 })
 
-app.use("/", express.static(path.resolve('admin', 'build')));
-app.get("/*", (req, res) => {
-    res.sendFile(path.resolve('admin', 'build', 'index.html'))
-})
-
 app.get("*", (req, res) => {
     res.status(404).sendFile("404.html")
 })
 
-// https.createServer(certificates, app).listen(443, () => {
-//     console.log("Server running on port 443")
-// })
-
-app.listen(4000, () => {
-    console.log("Server listening on port 4000")
+https.createServer(certificates, app).listen(443, () => {
+    console.log("Server running on port 443")
 })
+
+// app.listen(4000, () => {
+//     console.log("Server listening on port 4000")
+// })
