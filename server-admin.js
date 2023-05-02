@@ -51,7 +51,7 @@ app.post("/confirmPayment", async (req, res) => {
         const db = client.db("Tournament")
         const Applicants = db.collection("Applicants")
         Player = await Applicants.updateOne({_id: new ObjectId(req.body._id)}, {$set: {payment_status: req.body.status}})
-        res.status(200).json({success: `Player payment ${req.body.staus}`})
+        res.status(200).json({success: `Player payment ${req.body.status}`})
     } catch (error) {
         console.log("Error in /confirmPayment: ", error)
         res.status(500).json({success: "Player payment update failed"})
