@@ -17,6 +17,11 @@ const certificates = {
     cert: fs.readFileSync('./certificates/certificate.pem')
 }
 
+app.use(express.static(path.resolve('application', 'build')));
+app.get("/", (req,res) => {
+    res.sendFile(path.resolve('application', 'build', 'index.html'))
+})
+
 app.get("/privacy-policy", (req, res) => {
     res.sendFile(path.resolve("policies", "privacy-policy.html"))
 })
@@ -117,11 +122,6 @@ app.post("/addPayment", async (req, res) => {
     finally{
         await client.close()
     }
-})
-
-app.use(express.static(path.resolve('application', 'build')));
-app.get("/", (req,res) => {
-    res.sendFile(path.resolve('application', 'build', 'index.html'))
 })
 
 app.get("*", (req, res) => {
