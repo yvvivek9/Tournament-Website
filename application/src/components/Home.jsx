@@ -34,7 +34,7 @@ function Title ({loading}){
             setTimeout(() => {
                 const typed = new Typed("#typed-text", {
                     strings: ['FIRST EVER LAN EVENT IN HUBBALLI - DHARWAD'],
-                    typeSpeed: 50,
+                    typeSpeed: 20,
                     showCursor: false,
                     onComplete: viewApply
                   });

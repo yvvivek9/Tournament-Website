@@ -12,12 +12,13 @@
     display: inline-block;
     width: 80vw;
     height: fit-content;
+    padding-top: 10vh;
     padding-bottom: 5vh;
-    border: 5px solid rgb(0, 0, 0);
-    background-color: rgb(255, 42, 42);
+    background-color: rgb(0, 0, 0, 0.8);
     font-size: 3vh;
     font-family: "Noto Sans";
-    color: white;
+    color: rgb(66, 183, 222);
+    box-shadow: 0px 0px 10px 5px rgb(66, 183, 222);
 }
 
 .form-body input:focus{
@@ -40,9 +41,17 @@
     width: 80%;
     border: 0px;
     border-bottom: 2px solid white;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(56, 152, 184, 0.6);
     text-align: center;
     color: white;
+}
+
+.form-team-name::placeholder{
+    color: whitesmoke;
+}
+
+.form-team-name:focus{
+    background-color: rgb(56, 152, 184, 0.9);
 }
 
 .form-main{
@@ -72,7 +81,7 @@
     width: 100%;
     height: 3vh;
     font-size: 3vh;
-    background-color: black;
+    background-color: rgb(0, 0, 0, 0);
     color: white;
     border: 0px;
     border-bottom: 1px solid white;
@@ -116,53 +125,59 @@
 
 .button-reset{
     position: relative;
-    background-color: red;
+    background-color: whitesmoke;
     font-family: "ProductSans";
     font-size: 3vh;
     padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px; 
-    color: white;
-    transition: box-shadow 0.2s
+    color: red;
+    transition: color 0.1s;
+    transition: background-color 0.1s;
 }
 
 .button-reset:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 5px 3px rgb(184, 0, 0);
+    color: whitesmoke;
+    background-color: red;
 }
 
 .button-apply{
     position: relative;
-    background-color: blue;
-    color: white;
+    background-color: whitesmoke;
+    color: blue;
     font-family: "ProductSans";
     font-size: 3vh;
     padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px; 
-    transition: box-shadow 0.2s;
+    transition: color 0.1s;
+    transition: background-color 0.1s;
 }
 
 .button-apply:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 5px 3px rgb(27, 0, 177);
+    background-color: blue;
+    color: whitesmoke;
 }
 
 .button-payment{
     position: relative;
-    background-color: green;
-    color: white;
+    background-color: whitesmoke;
+    color: green;
     font-family: "ProductSans";
     font-size: 3vh;
     padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px; 
-    transition: box-shadow 0.2s;
+    transition: color 0.1s;
+    transition: background-color 0.1s;
 }
 
 .button-payment:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 5px 3px rgb(0, 90, 0);
+    color: whitesmoke;
+    background-color: green;
 }
 
 .payment-screen{

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import axios from 'axios'
 import jwtDecode from 'jwt-decode';
-import raze from './images/raze.mp4'
+import neon from './images/neon.mp4'
 import dp from './images/dp.png'
 import instagram from './images/instagram.svg'
 import whatsapp from './images/whatsapp.svg'
@@ -70,7 +70,8 @@ function App() {
 			</div>
 			{loading && <div className='loading-screen'><div className='loader'></div></div>}
 			<div className="background">
-				<video src={raze} alt='Not Supported' className='jett-img' autoPlay loop muted />
+				<video src={neon} alt='Not Supported' className='jett-img' autoPlay loop muted />
+				{/* <img src={jett} alt="Not Supported" className='jett-img' /> */}
 			</div>
 			<div className='floating-icons'>
 				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/4Tf4Ps6BBD") }} >
@@ -91,7 +92,7 @@ function App() {
 				<div className='logo'>
 					<img src={dp} className='logo-img' alt="Not supported" />
 					<div className='logo-name'>
-						KOHIN&#9830;&#9830;R &nbsp;eSPORTS
+						KohiNooR &nbsp;eSPORTS
 					</div>
 				</div>
 				<div className='login-container'>

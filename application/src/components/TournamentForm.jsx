@@ -7,15 +7,15 @@ import cancel from "../images/cancel.svg"
 function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
     return(
         <div className="form-body" data-aos="zoom-in" data-aos-duration="1000" data-aos-once >
-            <p className="form-team-title">What is your team name?</p>
+            {/* <p className="form-team-title">What is your team name?</p> */}
             <input type="text" className="form-team-name" value={user.team_name} onChange={(e) => {
                             setUser({...user, team_name: e.target.value})
-                        }} />
+                        }} placeholder="What is your Team Name?" />
             <br /><br />
             <div className="form-main">
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player1_name">Enter Captain Name:</label>
+                        <label for="player1_name">Captain Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player1_name} id="player1_name" onChange={(e) => {
@@ -25,7 +25,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player1_mob">Enter Captain Mobile Number:</label>
+                        <label for="player1_mob">Captain Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player1_mob} id="player1_mob" onChange={(e) => {
@@ -35,7 +35,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player1_gameid">Enter Captain Valorant ID:</label>
+                        <label for="player1_gameid">Captain Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player1_gameid} id="player1_gameid" onChange={(e) => {
@@ -45,7 +45,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player1_discord">Enter Captain Discord ID:</label>
+                        <label for="player1_discord">Captain Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player1_discord} id="player1_discord" onChange={(e) => {
@@ -58,7 +58,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
 
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player2_name">Enter Player 2 Name:</label>
+                        <label for="player2_name">Player 2 Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player2_name} id="player2_name" onChange={(e) => {
@@ -68,7 +68,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player2_mob">Enter Player 2 Mobile Number:</label>
+                        <label for="player2_mob">Player 2 Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player2_mob} id="player2_mob" onChange={(e) => {
@@ -78,7 +78,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player2_gameid">Enter Player 2 Valorant ID:</label>
+                        <label for="player2_gameid">Player 2 Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player2_gameid} id="player2_gameid" onChange={(e) => {
@@ -88,7 +88,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player2_discord">Enter Player 2 Discord ID:</label>
+                        <label for="player2_discord">Player 2 Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player2_discord} id="player2_discord" onChange={(e) => {
@@ -101,7 +101,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
 
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player3_name">Enter Player 3 Name:</label>
+                        <label for="player3_name">Player 3 Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player3_name} id="player3_name" onChange={(e) => {
@@ -111,7 +111,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player3_mob">Enter Player 3 Mobile Number:</label>
+                        <label for="player3_mob">Player 3 Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player3_mob} id="player3_mob" onChange={(e) => {
@@ -121,7 +121,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player3_gameid">Enter Player 3 Valorant ID:</label>
+                        <label for="player3_gameid">Player 3 Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player3_gameid} id="player3_gameid" onChange={(e) => {
@@ -131,7 +131,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player3_discord">Enter Player 3 Discord ID:</label>
+                        <label for="player3_discord">Player 3 Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player3_discord} id="player3_discord" onChange={(e) => {
@@ -144,7 +144,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
 
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player4_name">Enter Player 4 Name:</label>
+                        <label for="player4_name">Player 4 Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player4_name} id="player4_name" onChange={(e) => {
@@ -154,7 +154,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player4_mob">Enter Player 4 Mobile Number:</label>
+                        <label for="player4_mob">Player 4 Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player4_mob} id="player4_mob" onChange={(e) => {
@@ -164,7 +164,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player4_gameid">Enter Player 4 Valorant ID:</label>
+                        <label for="player4_gameid">Player 4 Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player4_gameid} id="player4_gameid" onChange={(e) => {
@@ -174,7 +174,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player4_discord">Enter Player 4 Discord ID:</label>
+                        <label for="player4_discord">Player 4 Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player4_discord} id="player4_discord" onChange={(e) => {
@@ -187,7 +187,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
 
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player5_name">Enter Player 5 Name:</label>
+                        <label for="player5_name">Player 5 Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player5_name} id="player5_name" onChange={(e) => {
@@ -197,7 +197,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player5_mob">Enter Player 5 Mobile Number:</label>
+                        <label for="player5_mob">Player 5 Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player5_mob} id="player5_mob" onChange={(e) => {
@@ -207,7 +207,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player5_gameid">Enter Player 5 Valorant ID:</label>
+                        <label for="player5_gameid">Player 5 Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player5_gameid} id="player5_gameid" onChange={(e) => {
@@ -217,7 +217,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player5_discord">Enter Player 5 Discord ID:</label>
+                        <label for="player5_discord">Player 5 Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player5_discord} id="player5_discord" onChange={(e) => {
@@ -234,7 +234,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player6_name">Enter Substitute Name:</label>
+                        <label for="player6_name">Substitute Name:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player6_name} id="player6_name" onChange={(e) => {
@@ -244,7 +244,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player6_mob">Enter Substitute Mobile Number:</label>
+                        <label for="player6_mob">Substitute Mobile Number:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player6_mob} id="player6_mob" onChange={(e) => {
@@ -254,7 +254,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player6_gameid">Enter Substitute Valorant ID:</label>
+                        <label for="player6_gameid">Substitute Valorant ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player6_gameid} id="player6_gameid" onChange={(e) => {
@@ -264,7 +264,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player6_discord">Enter Substitute Discord ID:</label>
+                        <label for="player6_discord">Substitute Discord ID:</label>
                     </div>
                     <div className="form-col2">
                         <input type="text" value={user.player6_discord} id="player6_discord" onChange={(e) => {
