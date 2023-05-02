@@ -400,6 +400,17 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
         }
     }
 
+    const displayInput = () => {
+        if(user.payment_status !== "confirmed")
+            return <>
+                    <input type="text" className="payment-screen-pid" placeholder="Enter your Transaction ID" onChange={
+                        (e) => {setPid(e.target.value)}
+                    } /><br /><br />
+                    <div className="payment-screen-verify" onClick={() => {submitPayment()}}>Verify</div>
+                    <br /><br />
+                </>
+    }
+
     const displayStatus = () => {
         if(user.payment_status === "paid")
             return <span>Your payment is being verified....</span>
@@ -422,11 +433,7 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
                 </ul>    
             </div>
             <img src={paymentQr} className="payment-screen-qr" alt="Not supported" /><br /><br />
-            <input type="text" className="payment-screen-pid" placeholder="Enter your Transaction ID" onChange={
-                (e) => {setPid(e.target.value)}
-            } /><br /><br />
-            <div className="payment-screen-verify" onClick={() => {submitPayment()}}>Verify</div>
-            <br /><br />
+                {displayInput()}
             <div className="payment-screen-status">
                 {displayStatus()}
             </div>
