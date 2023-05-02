@@ -9,7 +9,7 @@ import '../styling/Home.css'
 function Title ({loading}){
     const viewApply = () => {
         anime({
-            targets: '.apply-border',
+            targets: '.apply-button',
             opacity: 1,
             easing: 'linear',
             duration: 1000
@@ -65,10 +65,8 @@ function ApplyButton ({user, setLoading}) {
 
     return(
         <div className="apply-container">
-            <div className="apply-border">
-                <div className="apply-button" onClick={() => {handleClick()}}>
-                    {user.applied ? <span>View Form</span> : <span>APPLY</span>}
-                </div>
+            <div className="apply-button" onClick={() => {handleClick()}}>
+                {user.applied ? <span>View Application</span> : <span>APPLY</span>}
             </div>
         </div>
     )
@@ -92,14 +90,14 @@ function Venue() {
     }
 
     return(
-        <div className="venue" onClick={() => {handleClick().then(() => {animate()})}} data-aos="flip-up" data-aos-duration="1000" >
+        <div className="venue" onClick={() => {handleClick().then(() => {animate()})}} data-aos="flip-up" data-aos-duration="1000" data-aos-once >
             <div className="venue-title">Venue</div>
             <div className="venue-details">
             {venue ? 
                 <span className="venue-details-hidden">
                     <span><b>Date:</b> &nbsp;To Be Announced... </span><br />
-                    <span><b>Location:</b> &nbsp; Swarna Paradise, Hubbali</span><br />
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15389.85275250851!2d75.1463053!3d15.3513811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d75c53c77bc7%3A0x3c33ea4e64b161d8!2sHotel%20Swarnaa%20Paradise!5e0!3m2!1sen!2sin!4v1681147218590!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <span><b>Location:</b> &nbsp; Swarna Paradise, Hubballi</span><br />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15389.85275250851!2d75.1463053!3d15.3513811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d75c53c77bc7%3A0x3c33ea4e64b161d8!2sHotel%20Swarnaa%20Paradise!5e0!3m2!1sen!2sin!4v1681147218590!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
                 <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
             }
@@ -126,7 +124,7 @@ function Details() {
     }
 
     return(
-        <div className="details" onClick={() => {handleClick().then(() => {animate()})}} data-aos="flip-up" data-aos-duration="1000" >
+        <div className="details" onClick={() => {handleClick().then(() => {animate()})}} data-aos="flip-up" data-aos-duration="1000" data-aos-once >
             <div className="details-title">Details</div>
             <div className="details-details">
             {details ? 

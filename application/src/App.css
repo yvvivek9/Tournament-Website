@@ -1,3 +1,33 @@
+.mobile-display{
+  display: none;
+}
+
+@media only screen and (max-width: 1100px){
+  .mobile-display{
+    display: block;
+    position: fixed;
+    z-index: 150;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.95);
+  }
+
+  .mobile-display-container{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    font-size: 5vh;
+    border: 5px solid black;
+    border-radius: 20px;
+    font-family: "ProductSans";
+  }
+}
+
 .background{
   position: fixed;
   z-index: 0;
@@ -102,7 +132,7 @@
   width: 100%;
   height: 10vh;
   background-color: rgb(71, 63, 63);
-  opacity: 50%;
+  opacity: 90%;
 }
 
 .header{
@@ -167,11 +197,13 @@
   background-image: linear-gradient(rgb(218, 13, 13), rgb(221, 89, 89));
   padding: 10px;
   border-radius: 10px;
-  font-weight: 600;
+  font-family: "ProductSans";
   font-size: 2vh;
+  color: white;
 }
 
 .logout:hover{
+  cursor: pointer;
   background-image: linear-gradient(to top, rgb(218, 13, 13), rgb(221, 89, 89));
 }
 

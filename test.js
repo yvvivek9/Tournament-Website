@@ -5,6 +5,10 @@ const add2 = async () => {
     return Promise.resolve()
 }
 
+const add4 = () => {
+    x = [...x, 4]
+}
+
 const add3 = () => new Promise((resolve, reject) => {
     setTimeout(() => {
         x = [...x, 3]
@@ -14,11 +18,16 @@ const add3 = () => new Promise((resolve, reject) => {
 
 const final = async () => {
     console.log(x)
-    await add2()
-    console.log(x)
     await add3()
     console.log(x)
     console.log("half done")
+    if(x[1] === 2)
+        await add3()
+    else{
+        await add2()
+        add4()
+    }
+    console.log(x)
     return Promise.resolve()
 }
 
