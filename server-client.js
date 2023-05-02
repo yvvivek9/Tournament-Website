@@ -128,10 +128,10 @@ app.get("*", (req, res) => {
     res.status(404).sendFile("404.html")
 })
 
-// https.createServer(certificates, app).listen(443, () => {
-//     console.log("Server running on port 443")
-// })
-
-app.listen(3000, () => {
-    console.log("Server listening on port 3000")
+https.createServer(certificates, app).listen(443, () => {
+    console.log("Server running on port 443")
 })
+
+// app.listen(3000, () => {
+//     console.log("Server listening on port 3000")
+// })
