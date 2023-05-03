@@ -361,12 +361,6 @@ function Buttons({setLoading, user, setUser, con1, con2, con3, pscreen, setPscre
             })
     }
 
-    const viewPayment = () => {
-        if(user.applied)
-            return
-                <span className="button-payment" onClick={() => {setPscreen(!pscreen)}}>Payment</span>
-    }
-
     return(
         <div className="button-frame">
             <div className="button-frame-reset">
@@ -378,7 +372,7 @@ function Buttons({setLoading, user, setUser, con1, con2, con3, pscreen, setPscre
                 <span className="button-apply" onClick={() => {validateInputs()}} >Apply</span>}
             </div>
             <div className="button-frame-payment">
-                {viewPayment()}
+                {user.applied && <span className="button-payment" onClick={() => {setPscreen(!pscreen)}}>Payment</span>}
             </div>
         </div>
     )
