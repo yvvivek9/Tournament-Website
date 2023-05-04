@@ -6,6 +6,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styling/Home.css'
 
+import rog from "../images/rog.png"
+import marsMeat from "../images/mars meat.png"
+
 function Title ({loading}){
     const viewApply = () => {
         anime({
@@ -190,7 +193,18 @@ function Sponsers(){
     return(
         <div className="sponsers-container">
             <div className="sponsers-title">SPONSERED BY</div>
-            <div className="sponsers"></div>
+            <div className="sponsers">
+                <div className="main-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
+                    <p>Powered BY</p><br />
+                    <img src={rog} alt="Not supported" />
+                </div>
+                <div className="co-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
+                    <p>Co-Sponsered BY</p><br />
+                    <div className="co-sponser-container">
+                        <img src={marsMeat} alt="Not supported" />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

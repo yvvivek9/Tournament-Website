@@ -235,5 +235,64 @@
     font-size: 3vh;
     width: fit-content;
     height: fit-content;
+    font-family: "ProductSans";
     padding: 10px;
+}
+
+.sponsers{
+    position: relative;
+    display: flex;
+}
+
+.main-sponser{
+    position: relative;
+    flex: 50%;
+    border-right: 2px solid whitesmoke;
+    padding-bottom: 5vh;
+}
+
+.main-sponser p{
+    display: inline-block;
+    position: relative;
+    font-size: 2.5vh;
+    font-family: "valorant";
+    width: fit-content;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.main-sponser img{
+    position: relative;
+    height: 15vh;
+}
+
+.co-sponser{
+    position: relative;
+    flex: 50%;
+    padding-bottom: 5vh;
+}
+
+.co-sponser p{
+    display: inline-block;
+    position: relative;
+    font-size: 2.5vh;
+    font-family: "valorant";
+    width: fit-content;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.co-sponser-container{
+    position: relative;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.co-sponser-container img{
+    flex: wrap;
+    position: relative;
+    height: 7.5vh;
 }
