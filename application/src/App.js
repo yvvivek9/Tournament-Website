@@ -92,7 +92,7 @@ function App() {
 				<div className='logo'>
 					<img src={dp} className='logo-img' alt="Not supported" />
 					<div className='logo-name'>
-						KohiNooR &nbsp;eSPORTS
+						KohiNooR eSports
 					</div>
 				</div>
 				<div className='login-container'>
