@@ -98,9 +98,10 @@ function Venue() {
             <div className="venue-details">
             {venue ? 
                 <span className="venue-details-hidden">
-                    <span><b>Date:</b> &nbsp;To Be Announced... </span><br />
-                    <span><b>Location:</b> &nbsp; Swarna Paradise, Hubballi</span><br /><br />
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15389.85275250851!2d75.1463053!3d15.3513811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d75c53c77bc7%3A0x3c33ea4e64b161d8!2sHotel%20Swarnaa%20Paradise!5e0!3m2!1sen!2sin!4v1681147218590!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
+                    <span><b>Prelim's:</b> &nbsp; 27<sup>th</sup> &amp; 28<sup>th</sup> May, Online mode </span><br />
+                    <span><b>Playoff's:</b> &nbsp; 3<sup>rd</sup> &amp; 4<sup>th</sup> June, Offline mode</span><br />
+                    <span>Cafe Di'oro by CASA, Hubballi</span><br />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.319430244637!2d75.1244269!3d15.3591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d72ee03ed287%3A0xd364ddec802810fa!2sCafe%20Di&#39;oro%20by%20CASA!5e0!3m2!1sen!2sin!4v1683618676878!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
                 <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
             }
@@ -135,7 +136,7 @@ function Details() {
                     <ul>
                         <li>Tournament will be conducted in hybrid mode i.e,
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Eliminations will be conducted in Online mode to select top 20 teams</li>
+                                <li>Prelim's will be conducted in Online mode to select top 20 teams</li>
                                 <li>Top 20 teams will be having Playoff's as an Offline LAN Event</li>
                             </ul>
                         </li>
