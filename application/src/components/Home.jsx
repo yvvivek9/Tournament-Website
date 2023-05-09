@@ -133,10 +133,15 @@ function Details() {
             {details ? 
                 <span className="details-details-hidden">
                     <ul>
-                        <li>Registration Fee is <b>Rs. 3500</b> per team (non-refundable)</li>
-                        <li>PC Setups will be provided by us and the game must be played <b>On-site only</b></li>
+                        <li>Tournament will be conducted in hybrid mode i.e,
+                            <ul style={{listStyleType: "circle"}}>
+                                <li>Eliminations will be conducted in Online mode to select top 20 teams</li>
+                                <li>Top 20 teams will be having Playoff's as an Offline LAN Event</li>
+                            </ul>
+                        </li>
+                        <li>Registration Fee is <b>Rs. 1500</b> per team (non-refundable)</li>
                         <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
-                        <li>Veto based map selection is done among the current 7 maps pool to select 1 map</li>
+                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elim's) and best of 3 (in playoff's)</li>
                         <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
                         <li>Further details for play-offs will be provided by mail and discord</li>
                     </ul>

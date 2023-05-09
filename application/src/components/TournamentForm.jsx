@@ -426,7 +426,7 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
             <div className="payment-screen-details">
                 <p style={{fontSize: "2.2vh"}}>Instructions:</p>
                 <ul>
-                    <li>Scan the QR code below using any UPI app and make payment of 3500 INR</li>
+                    <li>Scan the QR code below using any UPI app and make payment of 1500 INR</li>
                     <li>Enter the UPI Transaction ID below and click on Verify (Please don't send the App Transaction ID's)</li>
                     <li>Our team will verify your payment within a day and respond to your email with the status / Also you can come back to this page to check your payment status</li>
                     <li>Please note that amount once paid is not refundable</li>
