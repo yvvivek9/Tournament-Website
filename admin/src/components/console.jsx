@@ -34,7 +34,7 @@ export default function Console(){
     return(
         <div className="console-body">
             {data.map((value, index) => {
-                if(value.applied)
+                //if(value.applied)
                 return(
                     <>
                     <div className="team" key={index}>

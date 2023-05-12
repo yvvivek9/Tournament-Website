@@ -74,7 +74,7 @@ function App() {
 				{/* <img src={jett} alt="Not Supported" className='jett-img' /> */}
 			</div>
 			<div className='floating-icons'>
-				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/4Tf4Ps6BBD") }} >
+				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/ZvsQYDbHEG") }} >
 					<img src={discord} alt='Not Supported' />
 				</div>
 				<div className='youtube' onClick={() => { openInNewTab("https://www.youtube.com/@KohinoorESports") }} >
@@ -83,7 +83,7 @@ function App() {
 				<div className='instagram' onClick={() => { openInNewTab("https://www.instagram.com/kohinoor_esports/") }} >
 					<img src={instagram} alt='Not Supported' />
 				</div>
-				<div className='whatsapp' onClick={() => { openInNewTab("https://discord.gg/4Tf4Ps6BBD") }} >
+				<div className='whatsapp' onClick={() => { openInNewTab("https://wa.me/+917975949520") }} >
 					<img src={whatsapp} alt='Not Supported' />
 				</div>
 			</div>

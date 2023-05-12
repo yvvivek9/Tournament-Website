@@ -15,7 +15,7 @@
 
 .floating-icons{
   position: fixed;
-  z-index: 1;
+  z-index: 60;
   bottom: 0;
   right: 0;
   height: 50%;

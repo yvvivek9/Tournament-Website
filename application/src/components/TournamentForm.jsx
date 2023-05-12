@@ -413,29 +413,36 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
 
     const displayStatus = () => {
         if(user.payment_status === "paid")
-            return <span>Your payment is being verified....</span>
+            return <p>Your payment is being verified....</p>
         else if(user.payment_status === "confirmed")
-            return <span style={{color: "green"}}>Your payment has been confirmed</span>
+            return <p style={{color: "green"}}>Your payment has been confirmed
+                <br />Join our <a href="https://discord.gg/ZvsQYDbHEG" target="_blank">Discord</a> and claim the participant role to recieve further updates
+            </p>
         else if(user.payment_status === "failed")
-            return <span style={{color: "red"}}>Your payment has failed !! Contact us for more info</span>
+            return <p style={{color: "red"}}>Your payment has failed !! Contact us for more info</p>
     }
 
     return(
-        <div className="payment-screen" data-aos="fade-in">
-            <img src={cancel} className="payment-cancel" alt="Not supported" onClick={() => {setPscreen(!pscreen)}} />
-            <div className="payment-screen-details">
-                <p style={{fontSize: "2.2vh"}}>Instructions:</p>
-                <ul>
-                    <li>Scan the QR code below using any UPI app and make payment of 1500 INR</li>
-                    <li>Enter the UPI Transaction ID below and click on Verify (Please don't send the App Transaction ID's)</li>
-                    <li>Our team will verify your payment within a day and respond to your email with the status / Also you can come back to this page to check your payment status</li>
-                    <li>Please note that amount once paid is not refundable</li>
-                </ul>    
-            </div>
-            <img src={paymentQr} className="payment-screen-qr" alt="Not supported" /><br /><br />
-                {displayInput()}
-            <div className="payment-screen-status">
-                {displayStatus()}
+        <div className="payment-screen-container">
+            <div className="payment-screen" data-aos="fade-in">
+                <div className="payment-screen-details">
+                    <p style={{fontSize: "2.2vh"}}>Instructions:</p>
+                    <ul>
+                        <li>Scan the QR code below using any UPI app and make payment of 1500 INR</li>
+                        <li>Enter the UPI Transaction ID below and click on Verify (Please don't send the App Transaction ID's)
+                            <br />(OR)<br />
+                            Send the payment screenshot by whatsapp to <a href="https://wa.me/+918105017189" target="_blank" >+91 8105017189</a>
+                        </li>
+                        <li>Our team will verify your payment within a day and respond to your email with the status / Also you can come back to this page to check your payment status</li>
+                        <li>Please note that amount once paid is not refundable</li>
+                    </ul>    
+                </div>
+                <img src={paymentQr} className="payment-screen-qr" alt="Not supported" /><br /><br />
+                    {displayInput()}
+                <div className="payment-screen-status">
+                    {displayStatus()}
+                </div>
+                <img src={cancel} className="payment-cancel" alt="Not supported" onClick={() => {setPscreen(!pscreen)}} />
             </div>
         </div>
     )
