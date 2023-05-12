@@ -34,6 +34,10 @@ app.get("/return-policy", (req, res) => {
     res.sendFile(path.resolve("policies", "return-policy.html"))
 })
 
+app.get("/rules", (req, res) => {
+    res.sendFile(path.resolve("policies", "rules.pdf"))
+})
+
 app.post("/findOrAdd", async (req, res) => {
     const client = new MongoClient(dburl);
     var Person = {}
@@ -128,10 +132,10 @@ app.get("*", (req, res) => {
     res.redirect("/")
 })
 
-https.createServer(certificates, app).listen(443, () => {
-    console.log("Server running on port 443")
-})
-
-// app.listen(4000, () => {
-//     console.log("Server listening on port 3000")
+// https.createServer(certificates, app).listen(443, () => {
+//     console.log("Server running on port 443")
 // })
+
+app.listen(4000, () => {
+    console.log("Server listening on port 4000")
+})

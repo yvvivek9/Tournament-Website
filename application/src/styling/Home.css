@@ -29,6 +29,8 @@
     left: -1920px;
     margin-left: 50px;
     width: fit-content;
+    max-width: 80%;
+    word-wrap: break-word;
     font-family: 'valorant';
     font-size: 10vh;
     line-height: 0.75em;
@@ -44,6 +46,8 @@
     left: -1920px;
     margin-left: 50px;
     width: fit-content;
+    max-width: 100%;
+    word-wrap: break-word;
     font-size: 10vh;
     line-height: 0.7em;
     font-family: 'valorant';
@@ -126,6 +130,11 @@
     color: rgb(66, 183, 222);
 }
 
+.gmaps-link{
+    width: 60%;
+    height: 450px;
+}
+
 .venue-details-hidden{
     position: relative;
     opacity: 0;
@@ -142,6 +151,10 @@
     box-shadow: 0px 0px 5px 2px rgb(66, 183, 222);
     background-color: black;
     cursor: default;
+}
+
+.click-me{
+    position: relative;
 }
 
 .details-title{
@@ -295,4 +308,112 @@
     flex: wrap;
     position: relative;
     height: 7.5vh;
+}
+
+@media only screen and (max-width: 1000px){    
+    .title{
+        padding-top: 10vh;
+        min-height: 30vh;
+    }
+    
+    .title-1{
+        margin-left: 0px;
+        line-height: normal;
+        font-size: 50px;
+    }
+
+    .title-2{
+        margin-left: 0px;
+        line-height: normal;
+        font-size: 30px;
+    }
+
+    #typed-text{
+        margin-left: 0px;
+        font-size: 30px;
+        box-decoration-break: clone;
+    }
+
+    .apply-container{
+        min-height: 22vh;
+    }
+
+    .apply-button{
+        margin-left: 10%;
+        font-size: 30px;
+    }
+
+    .venue{
+        width: 80vw;
+    }
+
+    .venue-title{
+        left: 40px;
+    }
+
+    .venue-details{
+        padding-right: 0;
+    }
+
+    .gmaps-link{
+        width: 80%;
+        height: 200px;
+    }
+
+    .venue-details-hidden{
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .details{
+        width: 80vw;
+    }
+
+    .details-title{
+        left: 40px;
+    }
+
+    .details-details{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .details-details-hidden{
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .rules{
+        width: 80vw;
+    }
+
+    .rules-title{
+        left: 40px;
+    }
+
+    .rules-rules{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rules-rules-hidden{
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .click-me{
+        padding-left: 30px;
+    }
+
+    .sponsers{
+        display: block;
+    }
+
+    .main-sponser{
+        border: 0px;
+    }
+
+    .co-sponser-container{
+        display: block;
+    }
 }

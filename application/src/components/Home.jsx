@@ -48,7 +48,7 @@ function Title ({loading}){
     return(
         <div className="title">
             <div className="title-1">VALORANT</div>
-            <div className="title-2">LAN-CHAMPIONSHIP</div>
+            <div className="title-2">LAN&#8209;CHAMPIONSHIP</div>
             <span id="typed-text"></span>
         </div>
     )
@@ -98,10 +98,10 @@ function Venue() {
             <div className="venue-details">
             {venue ? 
                 <span className="venue-details-hidden">
-                    <span><b>Prelim's:</b> &nbsp; 27<sup>th</sup> &amp; 28<sup>th</sup> May, Online mode </span><br />
+                    <span><b>Prelim's:</b> &nbsp; 27<sup>th</sup> &amp; 28<sup>th</sup> May, Online mode </span><br /><br />
                     <span><b>Playoff's:</b> &nbsp; 3<sup>rd</sup> &amp; 4<sup>th</sup> June, Offline mode</span><br />
-                    <span>Cafe Di'oro by CASA, Hubballi</span><br />
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.319430244637!2d75.1244269!3d15.3591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d72ee03ed287%3A0xd364ddec802810fa!2sCafe%20Di&#39;oro%20by%20CASA!5e0!3m2!1sen!2sin!4v1683618676878!5m2!1sen!2sin" width="60%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
+                    <span>Cafe Di'oro by CASA, Hubballi</span><br /><br />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.319430244637!2d75.1244269!3d15.3591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d72ee03ed287%3A0xd364ddec802810fa!2sCafe%20Di&#39;oro%20by%20CASA!5e0!3m2!1sen!2sin!4v1683618676878!5m2!1sen!2sin" className="gmaps-link" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
                 <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
             }
@@ -136,8 +136,8 @@ function Details() {
                     <ul>
                         <li>Tournament will be conducted in hybrid mode i.e,
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Prelim's will be conducted in Online mode to select top 20 teams</li>
-                                <li>Top 20 teams will be having Playoff's as an Offline LAN Event</li>
+                                <li>Prelim's will be conducted in Online mode to select top 8 teams</li>
+                                <li>Top 8 teams will be having Playoff's as an On-site Event</li>
                             </ul>
                         </li>
                         <li>Registration Fee is <b>Rs. 1500</b> per team (non-refundable)</li>
@@ -147,7 +147,7 @@ function Details() {
                         <li>Further details for play-offs will be provided by mail and discord</li>
                     </ul>
                 </span>:
-                <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
+                <span className="click-me" style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
             }
             </div>
         </div>
@@ -186,9 +186,10 @@ function Rules() {
                         </li>
                         <li>All the team members should be present at the venue sharp at the mentioned reporting time</li>
                         <li>If a player has represented a team, he/she won’t be able to play for any other team(s).</li>
+                        <li>For further details/rules refer our <a href='/rules' target="_blank" >complete PDF</a></li>
                     </ul>
                 </span>:
-                <span style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
+                <span className="click-me" style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
             }
             </div>
         </div>

@@ -8,6 +8,7 @@ import instagram from './images/instagram.svg'
 import whatsapp from './images/whatsapp.svg'
 import discord from './images/discord.svg'
 import youtube from './images/youtube.svg'
+import dropDown from './images/dropdown.png'
 import './App.css';
 import Home from './components/Home'
 import TournamentForm from './components/TournamentForm'
@@ -15,6 +16,7 @@ import TournamentForm from './components/TournamentForm'
 function App() {
 	const [user, setUser] = useState({})
 	const [loading, setLoading] = useState(true)
+	const [viewPanel, setViewPanel] = useState(false)
 
 	const handleCallBackResponse = async (response) => {
 		setLoading(true)
@@ -23,8 +25,10 @@ function App() {
 			var jsonData = await axios.post('/findOrAdd', userData)
 			setUser(jsonData.data)
 			document.getElementById("loginButton").hidden = true
+			document.getElementById("mobileLoginButton").hidden = true
 			document.getElementsByClassName("user-name")[0].hidden = false
 			document.getElementsByClassName("logout")[0].hidden = false
+			document.getElementsByClassName("mobile-panel")[0].hidden = false
 		} catch (error) {
 			alert("Error occured: ", error)
 		} finally {
@@ -52,6 +56,7 @@ function App() {
 				callback: handleCallBackResponse
 			})
 			await google.accounts.id.renderButton(document.getElementById("loginButton"), { theme: "outline", size: "large" })
+			await google.accounts.id.renderButton(document.getElementById("mobileLoginButton"), { type: "icon", theme: "outline", size: "large" })
 			await google.accounts.id.prompt()
 			return Promise.resolve()
 		}
@@ -63,11 +68,6 @@ function App() {
 
 	return (
 		<>
-			<div className='mobile-display'>
-				<div className='mobile-display-container'>
-					This Website is being optimised for Mobile Browsing, Please use this website on desktop for now. Inconvinience is regretted.
-				</div>
-			</div>
 			{loading && <div className='loading-screen'><div className='loader'></div></div>}
 			<div className="background">
 				<video src={neon} alt='Not Supported' className='jett-img' autoPlay loop muted />
@@ -100,7 +100,15 @@ function App() {
 					<div className='user-name' hidden>Welcome, <br /> {user.name}</div>
 					<div className='logout' hidden onClick={() => { handleLogout() }} >Logout</div>
 				</div>
+				<div className='mobile-login'>
+					<img src={dropDown} className='mobile-panel' alt='Not supported' onClick={() => {setViewPanel(!viewPanel)}} hidden />
+					<div id='mobileLoginButton'></div>
+				</div>
 			</div>
+			{viewPanel && <div className='mobile-login-container'>
+				<div className='user-name'>Welcome, {user.name}</div><br />
+				<div className='logout' onClick={() => { handleLogout() }} >Logout</div>
+			</div>}
 			<div className='adjuster'></div>
 			<BrowserRouter>
 				<Routes>

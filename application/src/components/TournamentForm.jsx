@@ -7,8 +7,8 @@ import cancel from "../images/cancel.svg"
 function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
     return(
         <div className="form-body" data-aos="zoom-in" data-aos-duration="1000" data-aos-once >
-            {/* <p className="form-team-title">What is your team name?</p> */}
-            <input type="text" className="form-team-name" value={user.team_name} onChange={(e) => {
+            <span className="form-team-title">What is your team name?</span>
+            <input className="form-team-name" value={user.team_name} onChange={(e) => {
                             setUser({...user, team_name: e.target.value})
                         }} placeholder="What is your Team Name?" />
             <br /><br />
