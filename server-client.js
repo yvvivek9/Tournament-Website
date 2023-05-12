@@ -132,10 +132,10 @@ app.get("*", (req, res) => {
     res.redirect("/")
 })
 
-// https.createServer(certificates, app).listen(443, () => {
-//     console.log("Server running on port 443")
-// })
-
-app.listen(4000, () => {
-    console.log("Server listening on port 4000")
+https.createServer(certificates, app).listen(443, () => {
+    console.log("Server running on port 443")
 })
+
+// app.listen(4000, () => {
+//     console.log("Server listening on port 4000")
+// })
