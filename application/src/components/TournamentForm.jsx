@@ -416,7 +416,7 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
             return <p>Your payment is being verified....</p>
         else if(user.payment_status === "confirmed")
             return <p style={{color: "green"}}>Your payment has been confirmed
-                <br />Join our <a href="https://discord.gg/ZvsQYDbHEG" target="_blank">Discord</a> and claim the participant role to recieve further updates
+                <br />Join our <a href="https://discord.gg/VyQtnwkhe2" target="_blank">Discord</a> and claim the participant role to recieve further updates
             </p>
         else if(user.payment_status === "failed")
             return <p style={{color: "red"}}>Your payment has failed !! Contact us for more info</p>

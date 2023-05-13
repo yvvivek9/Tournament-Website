@@ -74,7 +74,7 @@ function App() {
 				{/* <img src={jett} alt="Not Supported" className='jett-img' /> */}
 			</div>
 			<div className='floating-icons'>
-				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/ZvsQYDbHEG") }} >
+				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/VWNHUknYBp") }} >
 					<img src={discord} alt='Not Supported' />
 				</div>
 				<div className='youtube' onClick={() => { openInNewTab("https://www.youtube.com/@KohinoorESports") }} >
