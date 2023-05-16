@@ -150,7 +150,18 @@ function Details() {
                             </ul>
                         </li>
                         <li>Interested Participants without a team can also register, they will be having a deathmatch with other single participants of their rank. Top 5 players of the deathmatch will be asked to form a Team</li>
-                        <li>Registration Fee is <b>Rs. 500</b> per team and <b>Rs. 100</b> per player (non-refundable)</li>
+                        <li>Registration Fee is (Non - Refundable)
+                            <ul style={{listStyleType: "circle"}}>
+                                <li>Rs. 500 per Team</li>
+                                <li>Rs. 100 per Player</li>
+                            </ul>
+                        </li>
+                        <li>Prize Pool is
+                            <ul style={{listStyleType: "circle"}}>
+                                <li>Rs. 10,000 for Winners</li>
+                                <li>Rs. 5,000 for Runner-ups</li>
+                            </ul>
+                        </li>
                         <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
                         <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elim's and ) and best of 3 (in playoff's)</li>
                         <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
