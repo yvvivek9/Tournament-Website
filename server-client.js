@@ -96,7 +96,6 @@ app.post("/update", async(req, res) => {
         const Applicants = db.collection("Applicants")
         Team = req.body
         delete Team._id
-        console.log(Team)
         temp = await Applicants.replaceOne({email: req.body.email}, Team)
         Player = await Applicants.findOne({email: req.body.email})
         console.log(Player)

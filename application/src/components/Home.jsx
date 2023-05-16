@@ -5,6 +5,7 @@ import Typed from 'typed.js'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styling/Home.css'
+import cancel from "../images/cancel.svg"
 
 import rog from "../images/rog.png"
 import marsMeat from "../images/mars meat.png"
@@ -54,15 +55,23 @@ function Title ({loading}){
     )
 }
 
-function ApplyButton ({user, setLoading}) {
+function ApplyButton ({user, setLoading, setViewStatus}) {
     const navigate = useNavigate()
     const handleClick = () => {
         if(Object.keys(user).length === 0){
             alert("Please login to apply")
         }
         else{    
-            setLoading(true)
-            navigate("/apply")
+            if(!user.status)
+                setViewStatus(true)
+            else if(user.status === "single"){
+                setLoading(true)
+                navigate("/applySingle")
+            }
+            else if(user.status === "team"){
+                setLoading(true)
+                navigate("/apply")
+            }
         }
     }
 
@@ -98,8 +107,8 @@ function Venue() {
             <div className="venue-details">
             {venue ? 
                 <span className="venue-details-hidden">
-                    <span><b>Prelim's:</b> &nbsp; 27<sup>th</sup> &amp; 28<sup>th</sup> May, Online mode </span><br /><br />
-                    <span><b>Playoff's:</b> &nbsp; 3<sup>rd</sup> &amp; 4<sup>th</sup> June, Offline mode</span><br />
+                    <span><b>Prelim's:</b> &nbsp; 10<sup>th</sup> &amp; 11<sup>th</sup> June, Online mode </span><br /><br />
+                    <span><b>Playoff's:</b> &nbsp; 17<sup>th</sup> &amp; 18<sup>th</sup> June, Offline mode</span><br />
                     <span>Cafe Di'oro by CASA, Hubballi</span><br /><br />
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.319430244637!2d75.1244269!3d15.3591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d72ee03ed287%3A0xd364ddec802810fa!2sCafe%20Di&#39;oro%20by%20CASA!5e0!3m2!1sen!2sin!4v1683618676878!5m2!1sen!2sin" className="gmaps-link" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
@@ -136,13 +145,14 @@ function Details() {
                     <ul>
                         <li>Tournament will be conducted in hybrid mode i.e,
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Prelim's will be conducted in Online mode to select top 8 teams</li>
-                                <li>Top 8 teams will be having Playoff's as an On-site Event</li>
+                                <li>Prelim's will be conducted in Online mode to select top 20 teams</li>
+                                <li>Top 20 teams will be having Playoff's as an On-site Event</li>
                             </ul>
                         </li>
-                        <li>Registration Fee is <b>Rs. 1500</b> per team (non-refundable)</li>
+                        <li>Interested Participants without a team can also register, they will be having a deathmatch with other single participants of their rank. Top 5 players of the deathmatch will be asked to form a Team</li>
+                        <li>Registration Fee is <b>Rs. 500</b> per team and <b>Rs. 100</b> per player (non-refundable)</li>
                         <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
-                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elim's) and best of 3 (in playoff's)</li>
+                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elim's and ) and best of 3 (in playoff's)</li>
                         <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
                         <li>Further details for play-offs will be provided by mail and discord</li>
                     </ul>
@@ -216,15 +226,39 @@ function Sponsers(){
     )
 }
 
-export default function Home ({user, setLoading, loading}){
+function SelectStatus({ user, setUser, setViewStatus, setLoading }){
+    const navigate = useNavigate()
+    const setStatus = (status) => {
+        setUser({...user, status: status})
+        setViewStatus(false)
+        setLoading(true)
+        if(status === "single")
+            navigate("/applySingle")
+        else if(status === "team")
+            navigate("/apply")
+    }
+
+    return <div className="select-status-container">
+        <div className="select-status">
+            <img src={cancel} alt="Not Supported" className="status-hide" onClick={() => {setViewStatus(false)}} />
+            <div className="status-button" onClick={() => {setStatus("single")}}>I am Alone</div>
+            <div className="status-button" onClick={() => {setStatus("team")}}>I have a Team</div>
+        </div>
+    </div>
+}
+
+export default function Home ({user, setUser, setLoading, loading}){
+    const [viewStatus, setViewStatus] = useState(false)
+
     useEffect(() => {
         AOS.init()
     }, [])
 
     return(
         <div className="homepage">
+            {viewStatus && <SelectStatus user={user} setUser={setUser} setViewStatus={setViewStatus} setLoading={setLoading} />}
             <Title loading={loading} />
-            <ApplyButton user={user} setLoading={setLoading} />
+            <ApplyButton user={user} setLoading={setLoading} setViewStatus={setViewStatus} />
             <Venue />
             <Details />
             <Rules />

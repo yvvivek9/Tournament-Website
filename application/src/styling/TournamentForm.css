@@ -85,6 +85,10 @@
     text-align: center;
 }
 
+.form-col2 input:focus{
+    background-color: rgb(0, 0, 0, 1);
+}
+
 .form-agreement{
     position: relative; 
     margin-top: 5vh;

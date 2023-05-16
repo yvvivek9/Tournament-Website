@@ -12,6 +12,7 @@ import dropDown from './images/dropdown.png'
 import './App.css';
 import Home from './components/Home'
 import TournamentForm from './components/TournamentForm'
+import SingleForm from './components/SingleForm'
 
 function App() {
 	const [user, setUser] = useState({})
@@ -112,8 +113,9 @@ function App() {
 			<div className='adjuster'></div>
 			<BrowserRouter>
 				<Routes>
-					<Route exact index path='/' element={<Home user={user} setLoading={setLoading} loading={loading} />} ></Route>
+					<Route exact index path='/' element={<Home user={user} setUser={setUser} setLoading={setLoading} loading={loading} />} ></Route>
 					<Route exact path='/apply' element={<TournamentForm user={user} setUser={setUser} setLoading={setLoading} />} ></Route>
+					<Route exact path='/applySingle' element={<SingleForm user={user} setUser={setUser} setLoading={setLoading} />} ></Route>
 				</Routes>
 			</BrowserRouter>
 			<div className='policies'>
