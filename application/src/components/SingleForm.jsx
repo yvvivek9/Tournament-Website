@@ -62,7 +62,7 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
             </div>
             <div className="form-agreement">
                 <p><input type="checkbox" onChange={() => {setCon1(!con1)}} /> I have read and understood all the Terms and Conditions and confirm I will strictly adhere to it<br/>
-                <input type="checkbox" onChange={() => {setCon2(!con2)}} /> If I show up on time at the event, I can be disqualfied<br />
+                <input type="checkbox" onChange={() => {setCon2(!con2)}} /> If I am unable to show up on time at the event, I can be disqualfied<br />
                 <input type="checkbox" onChange={() => {setCon3(!con3)}} /> I confirm that all the above details provided by me are correct <br />&nbsp;&nbsp;&nbsp;&nbsp;(Player details can be modified till 3 days before the event)</p>
             </div>
         </div>
