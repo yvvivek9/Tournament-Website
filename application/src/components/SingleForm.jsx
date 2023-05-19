@@ -199,7 +199,7 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
                 <div className="payment-screen-details">
                     <p style={{fontSize: "2.2vh"}}>Instructions:</p>
                     <ul>
-                        <li>Scan the QR code below using any UPI app and make payment of 100 INR</li>
+                        <li>Scan the QR code below using any UPI app and make payment of 200 INR</li>
                         <li>Enter the UPI Transaction ID below and click on Verify (Please don't send the App Transaction ID's)
                             <br />(OR)<br />
                             Send the payment screenshot by whatsapp to <a href="https://wa.me/+918105017189" target="_blank" rel="noreferrer" >+91 8105017189</a>

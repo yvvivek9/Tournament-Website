@@ -152,8 +152,8 @@ function Details() {
                         <li>Interested Participants without a team can also register, they will be having a deathmatch with other single participants of their rank. Top 5 players of the deathmatch will be asked to form a Team</li>
                         <li>Registration Fee is (Non - Refundable)
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Rs. 500 per Team</li>
-                                <li>Rs. 100 per Player</li>
+                                <li>Rs. 1000 per Team</li>
+                                <li>Rs. 200 per Player</li>
                             </ul>
                         </li>
                         <li>Prize Pool is
