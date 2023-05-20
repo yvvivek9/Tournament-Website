@@ -34,7 +34,7 @@ export default function Console(){
     return(
         <div className="console-body">
             {data.map((value, index) => {
-                //if(value.applied)
+                if(value.applied)
                 return(
                     <>
                     <div className="team" key={index}>
@@ -46,6 +46,7 @@ export default function Console(){
                                 <th>Mobile No</th>
                                 <th>Game Tag</th>
                                 <th>Discord</th>
+                                <th>Rank</th>
                             </tr>
                             <tr>
                                 <td>Player 1</td>
@@ -53,6 +54,7 @@ export default function Console(){
                                 <td>{value.player1_mob}</td>
                                 <td>{value.player1_gameid}</td>
                                 <td>{value.player1_discord}</td>
+                                <td>{value.player1_rank}</td>
                             </tr>
                             <tr>
                                 <td>Player 2</td>
@@ -60,6 +62,7 @@ export default function Console(){
                                 <td>{value.player2_mob}</td>
                                 <td>{value.player2_gameid}</td>
                                 <td>{value.player2_discord}</td>
+                                <td>{value.player2_rank}</td>
                             </tr>
                             <tr>
                                 <td>Player 3</td>
@@ -67,6 +70,7 @@ export default function Console(){
                                 <td>{value.player3_mob}</td>
                                 <td>{value.player3_gameid}</td>
                                 <td>{value.player3_discord}</td>
+                                <td>{value.player3_rank}</td>
                             </tr>
                             <tr>
                                 <td>Player 4</td>
@@ -74,6 +78,7 @@ export default function Console(){
                                 <td>{value.player4_mob}</td>
                                 <td>{value.player4_gameid}</td>
                                 <td>{value.player4_discord}</td>
+                                <td>{value.player4_rank}</td>
                             </tr>
                             <tr>
                                 <td>Player 5</td>
@@ -81,6 +86,7 @@ export default function Console(){
                                 <td>{value.player5_mob}</td>
                                 <td>{value.player5_gameid}</td>
                                 <td>{value.player5_discord}</td>
+                                <td>{value.player5_rank}</td>
                             </tr>
                             <tr>
                                 <td>Player 6</td>
@@ -88,6 +94,7 @@ export default function Console(){
                                 <td>{value.player6_mob}</td>
                                 <td>{value.player6_gameid}</td>
                                 <td>{value.player6_discord}</td>
+                                <td>{value.player6_rank}</td>
                             </tr>
                         </table>
                         <p>Name: {value.name}, Email: {value.email}</p>

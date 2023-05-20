@@ -5,9 +5,9 @@ import paymentQr from '../images/payment-qr.png'
 import cancel from "../images/cancel.svg"
 
 function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
-    return(
-        <div className="form-body" data-aos="zoom-in" data-aos-duration="1000" data-aos-once >
-            <div className="form-main">
+    const ret_players = () => {
+        if(user.player_count === 1)
+            return <>
                 <div className="form-row">
                     <div className="form-col1">
                         <label for="player1_name">Your Name:</label>
@@ -50,16 +50,507 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                 </div>
                 <div className="form-row">
                     <div className="form-col1">
-                        <label for="player2_name">Your Valorant Rank:</label>
+                        <label for="player2_rank">Your Valorant Rank:</label>
                     </div>
                     <div className="form-col2">
-                    <input type="text" value={user.player2_name} id="player2_name" onChange={(e) => {
+                    <input type="text" value={user.player2_rank} id="player2_rank" onChange={(e) => {
+                            setUser({...user, player2_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+            </>
+        else if(user.player_count === 2)
+            return <>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_name">Your Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_name} id="player1_name" onChange={(e) => {
+                            setUser({...user, player1_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_mob">Your Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_mob} id="player1_mob" onChange={(e) => {
+                            setUser({...user, player1_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_gameid">Your Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_gameid} id="player1_gameid" onChange={(e) => {
+                            setUser({...user, player1_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_discord">Your Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_discord} id="player1_discord" onChange={(e) => {
+                            setUser({...user, player1_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_rank">Your Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player1_rank} id="player1_rank" onChange={(e) => {
+                            setUser({...user, player1_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_name">Player 2 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_name} id="player2_name" onChange={(e) => {
                             setUser({...user, player2_name: e.target.value})
                         }} />
                     </div>
                 </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_mob">Player 2 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_mob} id="player2_mob" onChange={(e) => {
+                            setUser({...user, player2_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_gameid">Player 2 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_gameid} id="player2_gameid" onChange={(e) => {
+                            setUser({...user, player2_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_discord">Player 2 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_discord} id="player2_discord" onChange={(e) => {
+                            setUser({...user, player2_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_rank">Player 2 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player2_rank} id="player2_rank" onChange={(e) => {
+                            setUser({...user, player2_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
                 <br />
+            </>
+        else if(user.player_count === 3)
+            return <>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_name">Your Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_name} id="player1_name" onChange={(e) => {
+                            setUser({...user, player1_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_mob">Your Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_mob} id="player1_mob" onChange={(e) => {
+                            setUser({...user, player1_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_gameid">Your Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_gameid} id="player1_gameid" onChange={(e) => {
+                            setUser({...user, player1_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_discord">Your Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_discord} id="player1_discord" onChange={(e) => {
+                            setUser({...user, player1_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_rank">Your Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player1_rank} id="player1_rank" onChange={(e) => {
+                            setUser({...user, player1_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_name">Player 2 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_name} id="player2_name" onChange={(e) => {
+                            setUser({...user, player2_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_mob">Player 2 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_mob} id="player2_mob" onChange={(e) => {
+                            setUser({...user, player2_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_gameid">Player 2 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_gameid} id="player2_gameid" onChange={(e) => {
+                            setUser({...user, player2_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_discord">Player 2 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_discord} id="player2_discord" onChange={(e) => {
+                            setUser({...user, player2_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_rank">Player 2 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player2_rank} id="player2_rank" onChange={(e) => {
+                            setUser({...user, player2_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_name">Player 3 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_name} id="player3_name" onChange={(e) => {
+                            setUser({...user, player3_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_mob">Player 3 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_mob} id="player3_mob" onChange={(e) => {
+                            setUser({...user, player3_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_gameid">Player 3 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_gameid} id="player3_gameid" onChange={(e) => {
+                            setUser({...user, player3_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_discord">Player 3 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_discord} id="player3_discord" onChange={(e) => {
+                            setUser({...user, player3_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_rank">Player 3 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player3_rank} id="player3_rank" onChange={(e) => {
+                            setUser({...user, player3_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+            </>
+        else if(user.player_count === 4)
+            return <>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_name">Your Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_name} id="player1_name" onChange={(e) => {
+                            setUser({...user, player1_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_mob">Your Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_mob} id="player1_mob" onChange={(e) => {
+                            setUser({...user, player1_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_gameid">Your Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_gameid} id="player1_gameid" onChange={(e) => {
+                            setUser({...user, player1_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_discord">Your Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player1_discord} id="player1_discord" onChange={(e) => {
+                            setUser({...user, player1_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player1_rank">Your Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player1_rank} id="player1_rank" onChange={(e) => {
+                            setUser({...user, player1_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_name">Player 2 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_name} id="player2_name" onChange={(e) => {
+                            setUser({...user, player2_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_mob">Player 2 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_mob} id="player2_mob" onChange={(e) => {
+                            setUser({...user, player2_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_gameid">Player 2 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_gameid} id="player2_gameid" onChange={(e) => {
+                            setUser({...user, player2_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_discord">Player 2 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player2_discord} id="player2_discord" onChange={(e) => {
+                            setUser({...user, player2_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player2_rank">Player 2 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player2_rank} id="player2_rank" onChange={(e) => {
+                            setUser({...user, player2_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_name">Player 3 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_name} id="player3_name" onChange={(e) => {
+                            setUser({...user, player3_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_mob">Player 3 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_mob} id="player3_mob" onChange={(e) => {
+                            setUser({...user, player3_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_gameid">Player 3 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_gameid} id="player3_gameid" onChange={(e) => {
+                            setUser({...user, player3_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_discord">Player 3 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player3_discord} id="player3_discord" onChange={(e) => {
+                            setUser({...user, player3_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player3_rank">Player 3 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player3_rank} id="player3_rank" onChange={(e) => {
+                            setUser({...user, player3_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player4_name">Player 4 Name:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player4_name} id="player4_name" onChange={(e) => {
+                            setUser({...user, player4_name: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player4_mob">Player 4 Mobile Number:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player4_mob} id="player4_mob" onChange={(e) => {
+                            setUser({...user, player4_mob: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player4_gameid">Player 4 Valorant ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player4_gameid} id="player4_gameid" onChange={(e) => {
+                            setUser({...user, player4_gameid: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player4_discord">Player 4 Discord ID:</label>
+                    </div>
+                    <div className="form-col2">
+                        <input type="text" value={user.player4_discord} id="player4_discord" onChange={(e) => {
+                            setUser({...user, player4_discord: e.target.value})
+                        }} />
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-col1">
+                        <label for="player4_rank">Player 4 Valorant Rank:</label>
+                    </div>
+                    <div className="form-col2">
+                    <input type="text" value={user.player4_rank} id="player4_rank" onChange={(e) => {
+                            setUser({...user, player4_rank: e.target.value})
+                        }} />
+                    </div>
+                </div>
+
+                <br />
+            </>
+    }
+
+    return(
+        <div className="form-body" data-aos="zoom-in" data-aos-duration="1000" data-aos-once >
+            <div className="form-main">
+                {ret_players()}
             </div>
+            {user.player_count !== 4 && <div className="player-inc-button" onClick={() => {setUser({...user, player_count: user.player_count+1})}}>
+                Add Player
+            </div>}
             <div className="form-agreement">
                 <p><input type="checkbox" onChange={() => {setCon1(!con1)}} /> I have read and understood all the Terms and Conditions and confirm I will strictly adhere to it<br/>
                 <input type="checkbox" onChange={() => {setCon2(!con2)}} /> If I am unable to show up on time at the event, I can be disqualfied<br />
@@ -88,7 +579,7 @@ function Buttons({setLoading, user, setUser, con1, con2, con3, pscreen, setPscre
             user.player1_mob.length === 0 ||
             user.player1_gameid.length === 0 ||
             user.player1_discord.length === 0 ||
-            user.player2_name.length === 0
+            user.player1_rank.length === 0
         )
             alert("Please Fill-in all the required fields")
         else{
@@ -199,7 +690,7 @@ function Payment({ pscreen, setPscreen, user, setUser, setLoading }) {
                 <div className="payment-screen-details">
                     <p style={{fontSize: "2.2vh"}}>Instructions:</p>
                     <ul>
-                        <li>Scan the QR code below using any UPI app and make payment of 200 INR</li>
+                        <li>Scan the QR code below using any UPI app and make payment of 200 INR per player</li>
                         <li>Enter the UPI Transaction ID below and click on Verify (Please don't send the App Transaction ID's)
                             <br />(OR)<br />
                             Send the payment screenshot by whatsapp to <a href="https://wa.me/+918105017189" target="_blank" rel="noreferrer" >+91 8105017189</a>

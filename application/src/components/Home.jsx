@@ -258,7 +258,7 @@ function SelectStatus({ user, setUser, setViewStatus, setLoading }){
     return <div className="select-status-container">
         <div className="select-status">
             <img src={cancel} alt="Not Supported" className="status-hide" onClick={() => {setViewStatus(false)}} />
-            <div className="status-button" onClick={() => {setStatus("single")}}>I am Alone</div>
+            <div className="status-button" onClick={() => {setStatus("single")}}>I dont have a Team</div>
             <div className="status-button" onClick={() => {setStatus("team")}}>I have a Team</div>
         </div>
     </div>

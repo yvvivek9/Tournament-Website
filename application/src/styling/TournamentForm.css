@@ -55,6 +55,24 @@
     position: relative;
 }
 
+.player-inc-button{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    font-family: "ProductSans";
+    font-size: 25px;
+    padding: 10px 30px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.player-inc-button:hover{
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
 .form-row{
     position: relative;
     display: flex;
