@@ -145,11 +145,16 @@ function Details() {
                     <ul>
                         <li>Tournament will be conducted in hybrid mode i.e,
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Prelim's will be conducted in Online mode to select top 20 teams</li>
-                                <li>Top 20 teams will be having Playoff's as an On-site Event</li>
+                                <li>Prelims will be conducted in Online mode to select top 16 teams</li>
+                                <li>Top 16 teams will be having Playoffs and Finals as an On-site Event</li>
                             </ul>
                         </li>
-                        <li>Interested Participants without a team can also register, they will be having a deathmatch with other single participants of their rank. Top 5 players of the deathmatch will be asked to form a Team</li>
+                        <li>Interested Participants without a team can also register, they can form a team by:
+                            <ul style={{listStyleType: "circle"}}>
+                                <li>Searching for fellow players in our discord's #looking-for-group channel</li>
+                                <li>Auto Balanced matchmaking will be done to get you in a team</li>
+                            </ul>
+                        </li>
                         <li>Registration Fee is (Non - Refundable)
                             <ul style={{listStyleType: "circle"}}>
                                 <li>Rs. 1000 per Team</li>
@@ -162,10 +167,8 @@ function Details() {
                                 <li>Rs. 5,000 for Runner-ups</li>
                             </ul>
                         </li>
-                        <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
-                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elim's and ) and best of 3 (in playoff's)</li>
-                        <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
-                        <li>Further details for play-offs will be provided by mail and discord</li>
+                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elims and playoffs) and best of 3 (in finals)</li>
+                        <li>Further details regarding match schedule will be provided by mail and discord</li>
                     </ul>
                 </span>:
                 <span className="click-me" style={{fontWeight: "500", fontSize: '30px'}}>Click to view</span>
@@ -199,6 +202,7 @@ function Rules() {
             {rules ? 
                 <span className="rules-rules-hidden">
                     <ul>
+                        <li>Game will be played on "Mumbai Server" and "Latest Patch Note"</li>
                         <li>Cheating of any kind is strictly prohibited</li>
                         <li>Physical and Verbal Abuse will not be entertained</li>
                         <li>Consumable Restrictions:<br />
@@ -207,6 +211,7 @@ function Rules() {
                         </li>
                         <li>All the team members should be present at the venue sharp at the mentioned reporting time</li>
                         <li>If a player has represented a team, he/she won’t be able to play for any other team(s).</li>
+                        <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
                         <li>For further details/rules refer our <a href='/rules' target="_blank" >complete PDF</a></li>
                     </ul>
                 </span>:
