@@ -209,6 +209,7 @@ function Rules() {
                             &emsp;Allowed: Water bottles, soft drinks, chewing gum<br />
                             &emsp;Not Allowed: Hot drinks, eatables, Tobacco, spitting.
                         </li>
+                        <li>Player will be penalised if he/she causes any damage to the organisations property</li>
                         <li>All the team members should be present at the venue sharp at the mentioned reporting time</li>
                         <li>If a player has represented a team, he/she won’t be able to play for any other team(s).</li>
                         <li>Technical & Tactical Timeout will be provided, In-case of any failure of equipment notify us immediately</li>
