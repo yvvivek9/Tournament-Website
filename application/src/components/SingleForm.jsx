@@ -564,7 +564,7 @@ function Buttons({setLoading, user, setUser, con1, con2, con3, pscreen, setPscre
     const updateUser = async () => {
         setLoading(true)
 		try {
-			var jsonData = await axios.post('/update', {...user, applied: true})
+			var jsonData = await axios.post('/update', {...user, applied: true, status: "single"})
 			setUser(jsonData.data)
 		} catch (error) {
 			alert("Error occured: ", error)

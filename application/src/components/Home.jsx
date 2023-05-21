@@ -246,7 +246,6 @@ function Sponsers(){
 function SelectStatus({ user, setUser, setViewStatus, setLoading }){
     const navigate = useNavigate()
     const setStatus = (status) => {
-        setUser({...user, status: status})
         setViewStatus(false)
         setLoading(true)
         if(status === "single")
