@@ -275,9 +275,16 @@
     text-align: center;
 }
 
-.main-sponser img{
+.main-sponser-container{
     position: relative;
-    height: 15vh;
+    display: flex;
+    padding: 0px 50px;
+}
+
+.main-sponser-container img{
+    position: relative;
+    max-height: 25vh;
+    flex: 50%;
 }
 
 .co-sponser{
@@ -458,6 +465,10 @@
 
     .main-sponser{
         border: 0px;
+    }
+
+    .main-sponser-container{
+        display: block;
     }
 
     .co-sponser-container{
