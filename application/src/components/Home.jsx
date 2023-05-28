@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 import '../styling/Home.css'
 import cancel from "../images/cancel.svg"
 import asus from "../images/asus.png"
-import rog from "../images/rog.png"
 import marsMeat from "../images/mars meat.png"
 
 function Title ({loading}){
@@ -229,11 +228,8 @@ function Sponsers(){
             <div className="sponsers-title">SPONSERED BY</div>
             <div className="sponsers">
                 <div className="main-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
-                    <p>Powered BY</p><br />
-                    <div className="main-sponser-container">
-                        <img src={asus} alt="Not supported" />
-                        <img src={rog} alt="Not supported" />
-                    </div>
+                    <p>Powered By</p><br />
+                    <img src={asus} alt="Not supported" />
                 </div>
                 <div className="co-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
                     <p>Co-Sponsered BY</p><br />
