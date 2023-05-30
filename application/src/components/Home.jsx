@@ -142,10 +142,12 @@ function Details() {
             {details ? 
                 <span className="details-details-hidden">
                     <ul>
-                        <li>Tournament will be conducted in hybrid mode i.e,
+                        <li>Tournament will be conducted in offline mode
                             <ul style={{listStyleType: "circle"}}>
-                                <li>Prelims will be conducted in Online mode to select top 16 teams</li>
-                                <li>Top 16 teams will be having Playoffs and Finals as an On-site Event</li>
+                                <li>Eliminations is best of 1 Map</li>
+                                <li>Finals is best of 3 Maps</li>
+                                <li>Setup (Laptop, Mouse, Headset) and Internet will be provided by us</li>
+                                <li>Gaming Laptops will be provided by ASUS ROG</li>
                             </ul>
                         </li>
                         <li>Interested Participants without a team can also register, they can form a team by:
@@ -166,7 +168,7 @@ function Details() {
                                 <li>Rs. 5,000 for Runner-ups</li>
                             </ul>
                         </li>
-                        <li>Veto based map selection is done among the current 7 map pool to select 1 map (in elims and playoffs) and best of 3 (in finals)</li>
+                        <li>Veto based map selection is done among the current 7 map pool</li>
                         <li>Further details regarding match schedule will be provided by mail and discord</li>
                     </ul>
                 </span>:
