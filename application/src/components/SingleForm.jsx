@@ -53,8 +53,8 @@ function Form({user, setUser, con1, setCon1, con2, setCon2, con3, setCon3}){
                         <label for="player2_rank">Your Valorant Rank:</label>
                     </div>
                     <div className="form-col2">
-                    <input type="text" value={user.player2_rank} id="player2_rank" onChange={(e) => {
-                            setUser({...user, player2_rank: e.target.value})
+                    <input type="text" value={user.player1_rank} id="player2_rank" onChange={(e) => {
+                            setUser({...user, player1_rank: e.target.value})
                         }} />
                     </div>
                 </div>
