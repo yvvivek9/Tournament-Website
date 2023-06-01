@@ -106,8 +106,7 @@ function Venue() {
             <div className="venue-details">
             {venue ? 
                 <span className="venue-details-hidden">
-                    <span><b>Prelim's:</b> &nbsp; 10<sup>th</sup> &amp; 11<sup>th</sup> June, Online mode </span><br /><br />
-                    <span><b>Playoff's:</b> &nbsp; 17<sup>th</sup> &amp; 18<sup>th</sup> June, Offline mode</span><br />
+                    <span><b>Playoff's:</b> &nbsp; 24<sup>th</sup> &amp; 25<sup>th</sup> June, Offline mode</span><br />
                     <span>Cafe Di'oro by CASA, Hubballi</span><br /><br />
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.319430244637!2d75.1244269!3d15.3591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d72ee03ed287%3A0xd364ddec802810fa!2sCafe%20Di&#39;oro%20by%20CASA!5e0!3m2!1sen!2sin!4v1683618676878!5m2!1sen!2sin" className="gmaps-link" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="google-maps"></iframe>
                 </span>:
