@@ -8,6 +8,8 @@ import '../styling/Home.css'
 import cancel from "../images/cancel.svg"
 import asus from "../images/asus.png"
 import marsMeat from "../images/mars meat.png"
+import ALS from "../images/ALS LOGO.png"
+import stan from "../images/Stan Logo.png"
 
 function Title ({loading}){
     const viewApply = () => {
@@ -235,6 +237,8 @@ function Sponsers(){
                 <div className="co-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
                     <p>Co-Sponsered BY</p><br />
                     <div className="co-sponser-container">
+                        <img src={ALS} alt="Not supported" />
+                        <img src={stan} alt="Not supported" />
                         <img src={marsMeat} alt="Not supported" />
                     </div>
                 </div>

@@ -301,14 +301,17 @@
 .co-sponser-container{
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 .co-sponser-container img{
-    flex: wrap;
     position: relative;
-    height: 7.5vh;
+    height: 15vh;
+    max-width: 90%;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .select-status-container{
@@ -463,5 +466,9 @@
 
     .co-sponser-container{
         display: block;
+    }
+
+    .co-sponser-container img{
+        margin: 0px;
     }
 }

@@ -4,6 +4,7 @@ import axios from 'axios'
 import jwtDecode from 'jwt-decode';
 import neon from './images/neon.mp4'
 import dp from './images/dp.png'
+import stan from "./images/Stan Logo.png"
 import instagram from './images/instagram.svg'
 import whatsapp from './images/whatsapp.svg'
 import discord from './images/discord.svg'
@@ -77,6 +78,9 @@ function App() {
 			<div className='floating-icons'>
 				<div className='discord' onClick={() => { openInNewTab("https://discord.gg/VWNHUknYBp") }} >
 					<img src={discord} alt='Not Supported' />
+				</div>
+				<div className='stan' onClick={() => { openInNewTab("https://discord.gg/QYKUnsk2Ej") }} >
+					<img src={stan} alt='Not Supported' />
 				</div>
 				<div className='youtube' onClick={() => { openInNewTab("https://www.youtube.com/@KohinoorESports") }} >
 					<img src={youtube} alt='Not Supported' />
