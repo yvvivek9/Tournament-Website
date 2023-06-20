@@ -70,7 +70,7 @@ function App() {
 
 	return (
 		<>
-			{loading && <div className='loading-screen'><div className='loader'></div></div>}
+			{loading && <div className='loading-screen'><div className='loader'></div><div className='loader-text'>Please reload if Stuck</div></div>}
 			<div className="background">
 				<video src={neon} alt='Not Supported' className='jett-img' autoPlay loop muted />
 				{/* <img src={jett} alt="Not Supported" className='jett-img' /> */}
