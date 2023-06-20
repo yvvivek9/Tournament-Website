@@ -10,6 +10,8 @@ import asus from "../images/asus.png"
 import marsMeat from "../images/mars meat.png"
 import ALS from "../images/ALS LOGO.png"
 import stan from "../images/Stan Logo.png"
+import pnp from "../images/WhiteP&P.svg"
+import zebronics from "../images/Zebronics Logo.png"
 
 function Title ({loading}){
     const viewApply = () => {
@@ -232,13 +234,16 @@ function Sponsers(){
             <div className="sponsers">
                 <div className="main-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
                     <p>Powered By</p><br />
-                    <img src={asus} alt="Not supported" />
+                    <img src={asus} alt="Not supported" /><br />
+                    <p>Accessories Partner</p><br />
+                    <img src={zebronics} alt="Not supported" />
                 </div>
                 <div className="co-sponser" data-aos="zoom-in" data-aos-duration="1000" data-aos-once>
                     <p>Co-Sponsered BY</p><br />
                     <div className="co-sponser-container">
                         <img src={ALS} alt="Not supported" />
                         <img src={stan} alt="Not supported" />
+                        <img src={pnp} alt="Not supported" />
                         <img src={marsMeat} alt="Not supported" />
                     </div>
                 </div>
