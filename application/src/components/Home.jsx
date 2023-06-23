@@ -61,20 +61,12 @@ function Title ({loading}){
 function ApplyButton ({user, setLoading, setViewStatus}) {
     const navigate = useNavigate()
     const handleClick = () => {
-        if(Object.keys(user).length === 0){
-            alert("Please login to apply")
+        if(user.applied){
+            setLoading(true)
+            navigate("/apply")
         }
-        else{    
-            if(!user.status)
-                setViewStatus(true)
-            else if(user.status === "single"){
-                setLoading(true)
-                navigate("/applySingle")
-            }
-            else if(user.status === "team"){
-                setLoading(true)
-                navigate("/apply")
-            }
+        else{
+            alert("Sryy!! Registrations have been closed.")
         }
     }
 
